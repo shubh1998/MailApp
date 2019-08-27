@@ -1,0 +1,31 @@
+<marquee direction="right"><b>Register now to use MailApp Services</b></marquee>
+  <h2 style="text-align: center;">Registration Form</h2>
+  {{#if msg}}
+  <div class="alert alert-success alert-dismissible">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    <strong>{{msg}}</strong>
+  </div>
+  {{/if}}
+
+  <form action="insertRecord" method="POST" enctype="multipart/form-data">
+    <div class="form-group">
+      <label>Name:</label>
+      <input type="text" class="form-control" id="uname" placeholder="Enter your name" name="uname" required>
+    </div>
+
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" class="form-control" id="email" placeholder="Enter email" name="email" required>
+    </div>
+    
+    <div class="form-group">
+      <label for="pwd">Password:</label>
+      <input type="password" class="form-control" id="password" placeholder="Enter password" name="password" required>
+    </div>
+
+    <div class="form-group">
+      <label>File:</label>
+      <input type="file" class="form-control" id="file" placeholder="Upload Your Profile pic" name="file" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Register</button>
+  </form>

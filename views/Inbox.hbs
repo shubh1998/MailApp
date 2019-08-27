@@ -1,0 +1,28 @@
+<marquee class="marquee" behavior="alternate"><b>Welcome To Our MailApp Services : Inbox-Service</b></marquee>
+  <h2 class="h2">Your Inbox</h2><br>
+  <table class="table table-hover">
+    <thead>
+      <tr class="active">
+        <th>MailId</th>
+        <th>Sender's Mail</th>
+        <th>Reciever's Mail</th>
+        <th>Subject</th>
+        <th>Message</th>
+        <th>Date</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each data}}
+        <tr class="danger">
+          <td>{{this.mailid}}</td>
+          <td>{{this.semail}}</td>
+          <td>{{this.remail}}</td>
+          <td>{{this.subject}}</td>
+          <td>{{this.message}}</td>
+          <td>{{this.maildate}}</td>
+          <td><a href="/DeleteInboxMail?mid={{this.mailid}}"  onClick="return confirm('Deleted????')" class="glyphicon glyphicon-trash"></a></td>
+        </tr>
+      {{/each}}
+    </tbody>
+  </table>
+

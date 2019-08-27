@@ -1,0 +1,24 @@
+  <marquee><b>Please Login To Explore MailApp Services</b></marquee>
+
+  <h2>Login Form</h2>
+  {{#if msg}}
+  <div class="alert alert-danger alert-dismissible">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    <strong>{{msg}}</strong>
+  </div>
+  {{/if}}
+
+  <form action="loginCheck" method="post" onSubmit="return login();">
+    <div class="form-group">
+      <label for="email">Email::</label>
+      <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+    </div>
+    <div class="form-group">
+      <label for="pwd">Password:</label>
+      <input type="password" class="form-control" id="password" placeholder="Enter password" name="password">
+    </div>
+    <div class="checkbox">
+      <label><input type="checkbox" name="remember"> Remember me</label>
+    </div>
+    <input type="submit" class="btn btn-primary" value="Login"  >
+  </form>

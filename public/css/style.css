@@ -1,0 +1,24 @@
+marquee{
+    color: red;
+    background-color: yellow;
+}
+
+.marquee{
+    color: blue;
+    background-color: lightblue;
+}
+
+h2{
+    text-align: center;
+    font-weight: bold;
+}
+
+.h2{
+    color: navy;
+    font-weight: bold;
+}
+
+.home{
+    text-align: left;
+    font-weight: normal;
+}

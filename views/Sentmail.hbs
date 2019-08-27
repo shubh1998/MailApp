@@ -1,0 +1,35 @@
+  <marquee class="marquee" behavior="alternate"><b>Welcome To Our MailApp Services : Sent-Mails</b></marquee>
+  
+  <h2 class="h2">Sent-Mails</h2><br>
+
+  {{#if msg}}
+  <div class="alert alert-success alert-dismissible">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    <strong>{{msg}}</strong>
+  </div>
+  {{/if}}
+  <table class="table table-hover">
+    <thead>
+      <tr class="active">
+        <th>MailId</th>
+        <th>Sender's Mail</th>
+        <th>Reciever's Mail</th>
+        <th>Subject</th>
+        <th>Message</th>
+        <th>Date</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each data}}
+        <tr class="warning">
+          <td>{{this.mailid}}</td>
+          <td>{{this.semail}}</td>
+          <td>{{this.remail}}</td>
+          <td>{{this.subject}}</td>
+          <td>{{this.message}}</td>
+          <td>{{this.maildate}}</td>
+          <td><a href="/DeleteSentMail?mid={{this.mailid}}"  onClick="return confirm('Deleted????')" class="glyphicon glyphicon-trash"></a></td>
+        </tr>
+      {{/each}}
+    </tbody>
+  </table>

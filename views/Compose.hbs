@@ -1,0 +1,31 @@
+<marquee class="marquee" behavior="alternate"><b>Welcome To Our MailApp Services : Compose-Mail</b></marquee>
+  <h2 class="h2">Compose Mail</h2>
+  {{#if msg}}
+  <div class="alert alert-success alert-dismissible">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    <strong>{{msg}}</strong>
+  </div>
+  {{/if}}
+
+  <form action="MailSent" method="POST">
+    <div class="form-group">
+      <label>From</label>
+      <input type="email" class="form-control" id="emailid" placeholder="Enter Sender's email" name="semail" value="{{user}}" readonly>
+    </div>
+
+    <div class="form-group">
+      <label>To</label>
+      <input type="email" class="form-control" id="mailid" placeholder="Enter Receivers email Id" name="remail">
+    </div>
+
+    <div class="form-group">
+      <label>Subject</label>
+      <input type="text" class="form-control" id="subject" placeholder="Enter Subject" name="subject">
+    </div>
+    
+    <div class="form-group">
+      <label>Message:</label><br>
+      <textarea cols="156" rows="8" name="message" type="text" placeholder="enter your message"></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Send-Mail</button>
+  </form>
